@@ -34,6 +34,22 @@ public class Entity : MonoBehaviour {
 
     public virtual void Move () {}
 
+    public virtual void Jump()
+    {
+        Vector2 newVel = new Vector2(rb.velocity.x, stats.jumpStr);
+        rb.velocity = newVel;
+    }
+
+    public virtual void JumpCancel()
+    {
+        Vector2 newVel = rb.velocity;
+        if(newVel.y > 0)
+        {
+            newVel.y /= 2;   
+        }
+        rb.velocity = newVel;
+    }
+
     public virtual void Destroy () {}
 
     public virtual void Init ()

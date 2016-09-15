@@ -2,6 +2,7 @@
 using System.Collections;
 
 [CreateAssetMenu()]
+[System.Serializable]
 public class Stats : ScriptableObject {
 
     public int maxHp;
@@ -9,4 +10,6 @@ public class Stats : ScriptableObject {
     public bool isImmortal;
 
     public float moveSpeed;
+
+    public float jumpStr;
 }
