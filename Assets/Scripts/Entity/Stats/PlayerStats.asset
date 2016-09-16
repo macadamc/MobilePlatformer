@@ -14,3 +14,4 @@ MonoBehaviour:
   maxHp: 1
   isImmortal: 0
   moveSpeed: 10
+  jumpStr: 5

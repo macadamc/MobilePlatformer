@@ -47,6 +47,7 @@ namespace CnControls
             _virtualButton.Release();
         }
 
+
         /// <summary>
         /// uGUI Event system stuff
         /// It's also utilised by the editor input helper
@@ -55,6 +56,7 @@ namespace CnControls
         public void OnPointerDown(PointerEventData eventData)
         {
             _virtualButton.Press();
+            Debug.Log(ButtonName);
         }
     }
 }

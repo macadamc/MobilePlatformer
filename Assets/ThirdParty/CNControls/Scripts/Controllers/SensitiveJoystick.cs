@@ -21,6 +21,20 @@ namespace CnControls
 
             HorizintalAxis.Value = horizontalSign * SensitivityCurve.Evaluate(horizontalSign * linearHorizontalValue);
             VerticalAxis.Value = verticalSign * SensitivityCurve.Evaluate(verticalSign * linearVecticalValue);
+
+            if(CnControls.CnInputManager.TouchCount == 0 && Input.GetMouseButton(0) == false)
+            {
+                OnDisable();
+                gameObject.SetActive(false);
+            }
         }
+
+        public void OnDisable()
+        {
+            HorizintalAxis.Value = 0f;
+            VerticalAxis.Value = 0f;
+        }
+
+
     }
 }

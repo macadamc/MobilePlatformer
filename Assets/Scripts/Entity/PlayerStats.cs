@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PlayerStats : MonoBehaviour {
 
+
+
     public int maxHp;
 
     public bool isImmortal;

@@ -18,8 +18,8 @@ public class TeleportManager : MonoBehaviour {
 
     //delegate void SceneLoaded();
 
-	// Use this for initialization
-	void Awake ()
+    // Use this for initialization
+    void Awake ()
     {
         if (GM_TELEPORT == null)                        //If there is no GM_TELEPORT instance - Set it to this instance
             GM_TELEPORT = this;
@@ -78,6 +78,11 @@ public class TeleportManager : MonoBehaviour {
     {
         levelLoaded = false;
         SceneManager.LoadScene(level);
+    }
+
+    public void SetTeleportKeyToLookFor(string key)
+    {
+        teleportKeyToLookFor = key;
     }
 
 }

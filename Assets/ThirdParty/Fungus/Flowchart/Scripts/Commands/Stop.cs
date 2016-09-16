@@ -18,6 +18,12 @@ namespace Fungus
         public override void OnEnter()
         {
             StopParentBlock();
+
+            //unpaused the game when called.
+            //Stop() must be called to end a fungus block and unpause the game
+            GameManager.GM.inDialogue = false;
+            GameManager.GM.SetPaused(false);
+
         }
 
         public override Color GetButtonColor()

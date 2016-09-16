@@ -103,8 +103,7 @@ namespace Fungus
                 currentStandaloneInputModule = EventSystem.current.GetComponent<StandaloneInputModule>();
             }
 
-            if (Input.GetButtonDown(currentStandaloneInputModule.submitButton) ||
-                (cancelEnabled && Input.GetButton(currentStandaloneInputModule.cancelButton)))
+            if(CnControls.CnInputManager.GetButtonDown("Fire1"))
             {
                 SetNextLineFlag();
             }
